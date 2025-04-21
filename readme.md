@@ -1,77 +1,95 @@
-This is a modern, fully responsive document management and Q&A frontend application built with **Next.js**, **React**, and **Tailwind CSS**. It features Google login, document upload, ingestion management, and a powerful Q&A interface. Backend calls are mocked to simulate actual API behavior for development and testing purposes.
+# 📄 Document Management & Q&A Frontend
+
+This is a modern, fully responsive **Document Management and Q&A** frontend application built with **Next.js**, **React**, and **Tailwind CSS**. It features a Google login system, document upload and ingestion simulation, and a powerful Q&A interface. API interactions are mocked to simulate real backend behavior for seamless development and testing.
 
 ---
 
 ## 🔧 Tech Stack
 
-- **Framework**: Next.js
-- **UI**: React, Tailwind CSS, Radix UI, Lucide Icons
+- **Framework**: Next.js 13
+- **Language**: TypeScript
+- **UI Libraries**:
+  - React
+  - Tailwind CSS
+  - Radix UI
+  - Lucide Icons
+  - CMDK
 - **State Management**: React Context API
 - **Authentication**: Google Sign-In (Mocked)
-- **Mocking**: Local mock services for all API interactions
+- **Mocking**: Local services simulate backend APIs
+- **Testing**: Jest, React Testing Library
 
 ---
 
 ## 📂 Features
 
 ### ✅ Authentication
-
-- Sign Up / Login / Logout
-- Google Sign-In integration (mocked)
-- Role-based access control (Admin/User)
+- Login / Logout
+- Google Sign-In (mocked)
+- Role-based access (Admin/User)
 
 ### ✅ Document Management
-
-- Upload and manage documents (mocked)
-- View document list
+- Upload and view documents (mocked)
+- Document list and status
 
 ### ✅ Ingestion Management
-
-- Trigger document ingestion (mocked)
-- View ingestion status
+- Simulate document ingestion
+- Monitor ingestion status
 
 ### ✅ Q&A Interface
-
-- Search/ask questions
-- Answers returned with relevant document excerpts
+- Ask natural language questions
+- Get answers with document references
 
 ### ✅ User Management
-
-- Admin-only access to view and manage users
+- Admin-only dashboard to manage users
 
 ---
 
-📁 Folder Structure
-bash
+## 📁 Folder Structure
+
+/components → Reusable React components
+/pages → Application routes (login, dashboard, upload, etc.)
+/context → Global state via Context API
+/mock → Mocked API services
+/styles → Tailwind + custom styles
+/utils → Helper utilities and constants
+
+yaml
 Copy
 Edit
-/components → Reusable React components
-/pages → Next.js pages (e.g., login, dashboard, upload)
-/mock → All mock API services
-/context → Global state management with Context API
-/styles → Tailwind CSS and custom styles
-/utils → Helper functions and constants
-🚀 Getting Started
 
-1. Clone the Repository
+---
 
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
 git clone https://github.com/ShubhamGlassfrog/project.git
-cd project 2. Install Dependencies
+cd project
 
-npm install 3. Run the Development Server
+2. Install Dependencies
+npm install
 
+3. Run the Development Server
 npm run dev
-Your app will be available at http://localhost:3000
+Visit http://localhost:3000 in your browser.
 
-📄 Mock API Services
-All API calls are intercepted and routed to mock services stored in /mock. These services return random or static data mimicking actual API responses to ensure the frontend can be tested independently.
+🧪 Running Tests
+npm run test       # Run all tests  
+npm run test:watch # Run tests in watch mode  
+🧩 Mock API Services
+All API calls are intercepted and routed through local mock services found in /mock. These provide static or randomized data mimicking real API responses for seamless development.
 
-✅ To-Do
-Add integration with actual backend services
+🛠️ To-Do
+ Connect to real backend services
 
-Improve document parsing preview UI
+ Add advanced document parsing & preview UI
 
-Add file size/type validation
+ File size/type validation during upload
+
+ Add pagination and filters to document list
 
 ✍️ Author
 Made with ❤️ by Shubham Kumar
+
+
